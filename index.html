@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EnergySense Appliances</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <!-- Top Navigation -->
+  <header class="site-header">
+    <a class="brand" href="#" data-route="home" aria-label="Go to Home">
+      <img src="assets/power-logo.svg" alt="Power logo" class="brand__logo" />
+      <span class="brand__text">EnergySense</span>
+    </a>
+    <nav class="topnav" aria-label="Primary">
+      <button class="topnav__link" data-route="home" aria-current="page">Home</button>
+      <button class="topnav__link" data-route="televisions">Televisions</button>
+      <button class="topnav__link" data-route="about">About Us</button>
+    </nav>
+  </header>
+
+  <h1>Energy Data Visualizations</h1>
+  
+  <!-- Chart Container Grid -->
+  <div class="chart-grid">
+    <div class="chart-container">
+      <h2>ARE Spot Prices</h2>
+      <div id="chart1" class="chart"></div>
+    </div>
+    
+    <div class="chart-container">
+      <h2>TV Energy by Screen Type (55 inch)</h2>
+      <div id="chart2" class="chart"></div>
+    </div>
+    
+    <div class="chart-container">
+      <h2>TV Energy by Screen Type (All Sizes)</h2>
+      <div id="chart3" class="chart"></div>
+    </div>
+    
+    <div class="chart-container">
+      <h2>Energy vs Star Rating</h2>
+      <div id="chart4" class="chart"></div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="js/data-loader.js"></script>
+  <script src="js/chart1.js"></script>
+  <script src="js/chart2.js"></script>
+  <script src="js/chart3.js"></script>
+  <script src="js/chart4.js"></script>
+
+
+
+</body>
+
+<!-- Footer -->
+  <footer class="site-footer">
+    <p>
+      <span id="year"></span> • <span id="your-name">Faiq</span> •
+      Built for learning.
+      <span class="ack">
+        This site includes code/content generated with the assistance of GenAI.
+      </span>
+    </p>
+  </footer>
+  <script>
+    // Update year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</html>
